@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="40dp"
+    android:fillViewport="true">
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" 
+        android:background="@anim/title_background">
+
+        <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:hint="@string/Remember_me"
+        android:textColor="#FFFFFF"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    </RelativeLayout>
+
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp" 
+        android:layout_marginTop="10dp"
+        android:background="@anim/title_background">
+
+        <ScrollView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@anim/title_background">
+            
+            <EditText
+                
+        		android:id="@+id/body"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:ems="10"
+        		android:gravity="top"
+        		android:textColor="#FFFFFF"
+        		android:hint="@string/What_is_on_your_mind"
+        		android:inputType="textMultiLine" />
+            
+        </ScrollView>
+       
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+         <RelativeLayout
+            android:id="@+id/imageSelectLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp" 
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/imageCard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@anim/title_background" />
+
+            <ImageButton
+                android:id="@+id/btAddImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_image"/>
+
+            <ImageView
+                android:id="@+id/imagebtImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_image" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/videoSelectLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/imageSelectLayout"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/videoCard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@anim/title_background" />
+
+            <ImageButton
+                android:id="@+id/btAddVideo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_video"/>
+
+            <ImageView
+                android:id="@+id/imagebtVideo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_video" />
+        </RelativeLayout>
+
+       
+
+        <RelativeLayout
+            android:id="@+id/audioSelectLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp" 
+            android:layout_toLeftOf="@+id/imageSelectLayout" 
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/audioCard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@anim/title_background" />
+
+            <ImageButton
+                android:id="@+id/btAddAudio"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+               	android:layout_centerInParent="true"
+                android:background="@drawable/bt_audio" />
+
+            <ImageView
+                android:id="@+id/imagebtAudio"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_audio"/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/timeSelectLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@+id/audioSelectLayout" 
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/timeCard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@anim/title_background" />
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/timeCard"
+                android:layout_alignTop="@+id/timeCard"
+                android:gravity="center"
+                android:text="Time"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                android:visibility="invisible"/>
+
+            <ImageButton
+                android:id="@+id/btAddTime"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_time" />
+
+            <ImageView
+                android:id="@+id/imagebtTime"
+                 android:layout_width="45dp"
+                android:layout_height="45dp"
+               	android:layout_centerInParent="true"
+                android:src="@drawable/bt_time" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/locationSelectLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/videoSelectLayout" 
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/locationCard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@anim/title_background" />
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/locationCard"
+                android:layout_alignTop="@+id/locationCard"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="Location"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                android:visibility="invisible"/>
+
+            <ImageButton
+                android:id="@+id/btAddLocation"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_location" />
+
+            <ImageView
+                android:id="@+id/imagebtLocation"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_location" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AddContentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" >
+
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@anim/layout_shadow_top"
+            android:alpha="0.8"
+            android:layout_marginTop="20dp" >
+            
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp" 
+            android:animateLayoutChanges="true">
+
+            <RelativeLayout
+                android:id="@+id/audioAddLayout"
+                android:layout_width="240dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:visibility="visible" >
+
+                <ImageButton
+                    android:id="@+id/btAddPlayAudio"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/btAddRecordAudio"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_play_audio" />
+
+                 <ImageButton
+                    android:id="@+id/btPauseAudio"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/btAddPlayAudio"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_pause_audio"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/bt_pause_audio_effect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/btPauseAudio"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bt_pause_audio_effect"
+                    android:visibility="invisible" />
+                
+                <ImageView
+                    android:id="@+id/bt_play_audio_effect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/btAddPlayAudio"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bt_play_audio_effect" />
+
+                <ImageButton
+                    android:id="@+id/btAddRecordAudio"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_record_audio" />
+
+                <ImageButton
+                    android:id="@+id/btStopRecordAudio"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/btAddRecordAudio"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_stop_record_audio"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/bt_stop_record_audio_effect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/btStopRecordAudio"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bt_stop_record_audio_effect"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/bt_record_audio_effect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bt_record_audio_effect"
+                    android:visibility="invisible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAudioPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/imageAddLayout"
+                android:layout_width="240dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:background="@anim/add_image_background"
+                android:visibility="invisible"  >
+
+                <ImageView
+                    android:id="@+id/AddViewImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/nexus" />
+
+                <ImageButton
+                    android:id="@+id/btCameraImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_camera" 
+                    android:visibility="invisible"/>
+
+                <ImageButton
+                    android:id="@+id/btFromFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btCameraImage"
+                    android:background="@android:color/transparent"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/bt_fromfile" 
+                	android:layout_marginTop="25dp"
+                	android:visibility="invisible" />
+
+                <ImageButton
+                    android:id="@+id/btSelectImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/bt_add_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/videoAddLayout"
+                android:layout_width="240dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:background="@anim/add_image_background"
+                android:visibility="invisible" >
+
+                <ImageButton
+                    android:id="@+id/btCameraVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/bt_camera"
+                    android:visibility="invisible" />
+
+                <ImageButton
+                    android:id="@+id/btFromFileVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:layout_below="@+id/btCameraVideo"
+                    android:src="@drawable/bt_fromfile" 
+                    android:visibility="invisible"/>
+
+                <VideoView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/AddViewVideo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <ImageButton
+                    android:id="@+id/btSelectVideo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/bt_add_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout 
+                android:id="@+id/timeAddLayout"
+                android:layout_width="240dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible">
+                
+                <DatePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:calendarViewShown="false"/>
+                
+                </RelativeLayout>
+                	
+                <RelativeLayout 
+                android:id="@+id/locationAddLayout"
+                android:layout_width="240dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible">
+                    
+                </RelativeLayout>
+            
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btClear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bt_clear" />
+		
+    
+    	<ImageView 
+       		android:id="@+id/bt_clear_effect" 
+        	android:layout_width="50dp"
+        	android:layout_height="50dp"
+        	android:layout_alignLeft="@+id/btClear"
+        	android:background="@drawable/bt_clear_effect"/>  
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</ScrollView>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="60dp" 
+ 	android:layout_alignParentBottom="true"
+ 	android:background="@anim/layout_shadow_top">
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#551E7F">
+     
+        
+    <ImageButton
+        android:id="@+id/btCreateEvent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bt_create" />
+    
+     <ImageView 
+        android:id="@+id/bt_create_effect" 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignLeft="@+id/btCreateEvent"
+        android:background="@drawable/bt_create_effect"/>   
+	
+	</RelativeLayout>
+	
+</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fu.agile.iremember.PhotoCapture" >
+
+    <ImageView 
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/mImageView" 
+        android:visibility="visible"
+        android:layout_centerInParent="true"/>
+    
+    <VideoView 
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" 
+		android:visibility="invisible"
+		android:layout_centerInParent="true"
+		android:id="@+id/viewVideo" />
+    
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="#333"
+        >
+
+        <Button
+            android:id="@+id/btSaveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="@string/btSaveImage"
+            android:layout_centerHorizontal="true" />
+        
+        <Button 
+            android:id="@+id/btCancelSaveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="@string/btCancelSaveImage"
+            android:layout_toRightOf="@+id/btSaveImage" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>
